@@ -1,0 +1,46 @@
+body {
+    background-color: #edfaff;
+}
+
+.navbar-brand {
+    padding-left: 2rem;
+    font-family: 'Serif', sans-serif;
+    font-size: 1.5rem;
+}
+
+.navbar {
+    background-color: white;
+}
+
+.container-fluid {
+    padding-top: 5rem;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.information p {
+    margin-bottom: 0;
+}
+
+.subscript {
+    margin-top: 0px;
+    font-size: 0.8rem;
+}
+
+.price {
+    /* margin-bottom: 0px; */
+    font-size: 1.5rem;
+}
+
+.with-image {
+    padding: 0;
+}
+
+h3 {
+    margin-top: 20px;
+}

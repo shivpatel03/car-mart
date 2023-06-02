@@ -1,0 +1,17 @@
+body {
+    background-color: #edfaff;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.navbar-brand {
+    padding-left: 2rem;
+    font-family: 'Serif', sans-serif;
+    font-size: 1.5rem;
+}
+
+.navbar {
+    background-color: white;
+}

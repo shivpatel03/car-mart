@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="listingPage.css">
+    <title>Make a Car Listing</title>
+</head>
+<body>
+ <!--Navbar-->
+ <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.php">CARMART</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link text-success" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active bg-success" href="listingPage.html">Sell</a>
+            </li>
+            <li class="nav-item "><a class="nav-link text-success" href="index.php#contact" data-toggle="model">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<!--Navbar-->
+
+    <form action="carListing.php" method="post" enctype="multipart/form-data">
+        <div class="container" id="sell">
+            <h2>Create a Listing</h2>
+            <div class="form-group seller-information shadow-sm p-3 mb-5 bg-body rounded">
+                <h3>Personal Seller Information</h3>
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" id="name" aria-describedby="name" placeholder="Enter your First and Last Name">
+
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" class="form-control" name="phone" id="name" aria-describedby="phoneNumber" placeholder="Enter your contact phone number">            <small id="emailHelp" class="form-text text-muted">Enter a potential meet-up spot that you would prefer with the buyer.</small>
+                <small id="phoneNumber" class="form-text text-muted">Enter the most convenient number that the buyer can contact you at.</small>
+                <br>
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+
+                <label for="address">Pickup Address</label>
+                <input type="text" class="form-control" name="location" id="address" aria-describedby="address" placeholder="Enter address">
+                <small id="email" class="form-text text-muted">Enter a potential meet-up spot that you would prefer with the buyer.</small>
+            </div>
+        </div> 
+        <div class="container">
+            <div class="form-group car-information shadow-sm p-3 mb-5 bg-body rounded">
+                <h3>Car Information</h3>
+                <div class="mb-3">
+                    <label for="car-image" class="form-label">Enter an image of your car</label>
+                    <input class="form-control" type="file" name="thisimage"  id="car-image">
+                    <small id="email" class="form-text text-muted">Supported file types are: .png</small>
+                </div>
+                
+                <div>
+                    <label for="price">Price</label>
+                    <input type="text" class="form-control" name="price" id="price" aria-describedby="price" placeholder="Enter a price for your vehicle.">
+                    <small id="price" class="form-text text-muted">This price can be negotiated with the buyer.</small>
+                </div>
+                <div>
+                    <label for="desciption">Enter a brief description of the car.</label>
+                    <textarea class="form-control" name="description" id="description" rows="4" placeholder="Enter your description."></textarea>
+                </div>
+
+                <h4>General Car Information</h4>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="model">Year</label>
+                        <input type="text" class="form-control" name="year" id="year" aria-describedby="year" placeholder="Manufacturing Year">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="color">Color</label>
+                        <input type="text" class="form-control" name="color" id="color" aria-describedby="color" placeholder="Vehicle Color">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="model">Model:</label>
+                        <input type="text" class="form-control" name="model" id="price" aria-describedby="price" placeholder="Vehicle Price">
+                    </div>
+
+                    <div class="col-3">
+                        <p>Body Type:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" value="SUV" id="suv">
+                            <label class="form-check-label" for="suv">SUV</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" value="Coupe" id="coupe" >
+                            <label class="form-check-label" for="coupe">Coupe</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" value="Truck" id="truck">
+                            <label class="form-check-label" for="truck">Truck</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="type" value="Sedan" id="sedan">
+                            <label class="form-check-label" for="sedan">Sedan</label>
+                        </div>
+                    </div>
+                </div>
+                <h4>Specific Car Information</h4>
+                <div class="row">
+                    <div class="col-4">
+                        <p>Condition</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="condition" value="New" id="new">
+                            <label class="form-check-label" for="new">New</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="condition" value="Used" id="used" >
+                            <label class="form-check-label" for="used">Used</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <label for="kilometers">Mileage</label>
+                        <input type="text" class="form-control" name="kilometers" id="kilometers" aria-describedby="kilometers" placeholder="Kilometers">
+                    </div>
+                    <div class="col-4">
+                        <p>Fuel Type</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="fuel" value="Gas" id="gas">
+                            <label class="form-check-label" for="gas">Gas-Powered</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="fuel" value="Electric" id="electric" >
+                            <label class="form-check-label" for="electric">Electric</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="fuel" value="Hybrid" id="hybrid" >
+                            <label class="form-check-label" for="hybrid">Hybrid</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary bg-success" name ="submit"type="submit">Submit</button>
+            <small id="price" class="form-text text-muted">By submitting your listing you agree to our terms and services.</small>
+        </div> 
+    </form>
+    <footer>
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+              <div class="copyright">
+                &copy; Copyright <strong><span>AutoTraders</span></strong>. All Rights Reserved
+              </div> 
+            </div>
+          </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+
+</html>

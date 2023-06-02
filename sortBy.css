@@ -1,0 +1,45 @@
+body{
+    background-color: #f1f1f1;
+    margin-top: 60px;
+}
+.navbar-brand {
+    padding-left: 2rem;
+    font-family: 'Serif', sans-serif;
+    font-size: 1.5rem;
+}
+.navbar{
+    background-color: white;
+}
+/* Title Page*/
+.jumbotron{
+    margin-top: 3.8%;
+    background-color: black;
+    color: white;
+    background-image: url(https://wallpaperboat.com/wp-content/uploads/2019/10/cool-website-background-17.jpg);
+}
+.active{
+    display: block;
+}
+.deactive{
+    display: none;
+}
+.container .thumbnail p{
+    text-align: center;
+    font-size: 25px;
+}
+.container h1{
+    text-align: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+footer{
+    position: fixed;
+   bottom: 0;
+   width: 100%;
+}
